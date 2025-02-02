@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "title": "Sunset Mountains",
+      "description": "Golden hour in the mountains #nature",
+      "type": "image",
+      "url": "images/sunset-mountains.jpg"
+    },
+    {
+      "title": "Ocean Waves",
+      "description": "Relaxing waves at the beach #travel",
+      "type": "video",
+      "url": "videos/ocean-waves.mp4"
+    }
+    // Add YOUR content here (replace with your own images/videos)
+  ]
+}
