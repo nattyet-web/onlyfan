@@ -62,6 +62,7 @@ main {
   width: 100%;
   padding: 12px;
   margin-bottom: 2rem;
+      margin-top: 2rem;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border);
   color: var(--text-primary);
