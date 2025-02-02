@@ -25,119 +25,55 @@ body {
 /* Header */
 header {
   background-color: var(--bg-secondary);
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 15px;
+  text-align: center;
 }
 
 nav a {
   color: var(--text-secondary);
+  margin: 0 10px;
   text-decoration: none;
-  margin-left: 2rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--accent);
 }
 
 /* Main Content */
 .container {
+  width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: auto;
+  padding: 20px;
 }
 
-main {
-  flex: 1;
-  padding: 2rem 0;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 2rem;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  border-radius: 4px;
-}
-
-.grid-container {
+/* Grid Layout */
+.grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 20px;
 }
 
-.item {
-  background-color: var(--bg-secondary);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.item:hover {
-  transform: translateY(-5px);
-}
-
-.item img, .item video {
+/* Ensure 1 image per row on mobile */
+.grid-item {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-bottom: 1px solid var(--border);
 }
 
-.item-info {
-  padding: 1rem;
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
-.item-info h3 {
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
+/* Hide description on mobile */
+.description {
+  display: none;
 }
 
-.item-info p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
+/* Responsive Design */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on PC */
+  }
 
-/* Pagination */
-.pagination {
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.pagination button {
-  padding: 8px 16px;
-  margin: 0 4px;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.pagination button.active {
-  background-color: var(--accent);
-  border-color: var(--accent);
-}
-
-/* Footer */
-footer {
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border);
-  padding: 1.5rem 0;
-  margin-top: auto;
-}
-
-footer p {
-  color: var(--text-secondary);
-  text-align: center;
-  font-size: 0.9rem;
+  /* Show description on larger screens */
+  .description {
+    display: block;
+  }
 }
