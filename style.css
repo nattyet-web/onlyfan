@@ -87,7 +87,7 @@ main {
 
 .item img, .item video {
   width: 100%;
-  height: 250px;
+  height: 85%;
   object-fit: cover;
   border-bottom: 1px solid var(--border);
 }
@@ -170,7 +170,7 @@ footer p {
   }
 
   .item img, .item video {
-    height: 200px;
+    height: 86%;
   }
 
   #searchInput {
