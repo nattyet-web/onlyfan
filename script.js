@@ -37,6 +37,11 @@ function renderGrid(page, query = '') {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Search functionality
+document.getElementById('searchBox').addEventListener('input', (event) => {
+  renderGrid(currentPage, event.target.value);
+});
+
 // Pagination buttons
 document.getElementById('nextPage').addEventListener('click', () => {
   if (currentPage * itemsPerPage < allItems.length) {
@@ -50,4 +55,9 @@ document.getElementById('prevPage').addEventListener('click', () => {
     currentPage--;
     renderGrid(currentPage);
   }
+});
+
+// Dark mode toggle
+document.getElementById('darkModeToggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
 });
