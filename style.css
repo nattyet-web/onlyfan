@@ -77,3 +77,12 @@ nav a {
     display: block;
   }
 }
+
+/* Footer */
+footer {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  color: var(--text-secondary);
+}
