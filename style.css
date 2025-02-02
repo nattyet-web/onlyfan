@@ -12,7 +12,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-h1.a(
+a(
     color: #fff;
     text-decoration: none;
 )
